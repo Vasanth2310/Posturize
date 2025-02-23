@@ -13,6 +13,10 @@
 - [📄 License](#-license)
 - [👏 Acknowledgments](#-acknowledgments)
 
+## 🔗 Live Demo & Video
+- **Frontend Deployed on Vercel**: [Posturize Frontend](https://posturize.vercel.app/)
+- **Demo Video on Vimeo**: [Watch Here](https://vimeo.com/1059416217/6624da291b)
+
 ## 📍 Overview
 
 **Posturize** is an AI-powered fitness web application that utilizes computer vision to analyze body posture, evaluate form, count repetitions, and provide real-time feedback during workouts. The app helps users improve their exercise technique, reduce the risk of injuries, and enhance workout efficiency using AI-driven posture correction.
@@ -141,7 +145,7 @@ npm run dev
 - [X] Build React-based interactive frontend
 - [X] Add real-time feedback and error tracking
 - [X] Deploy backend and frontend on Vercel
-- [ ] Integrate personalized workout plans
+- [X] Integrate personalized workout plans
 
 ## 🤝 Contributing
 
