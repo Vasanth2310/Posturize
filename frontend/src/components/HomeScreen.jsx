@@ -42,10 +42,6 @@ const HomeScreen = () => {
     navigate('/login');
   };
 
-  const handlePricingClick = () => {
-    navigate('/pricing');
-  };
-
   return (
     <div className="home-container">
       <header className="header">
@@ -55,8 +51,8 @@ const HomeScreen = () => {
         </div>
         <nav className="navigation">
           <a href="/" className="nav-link login-button">Home</a>
-          <button className="nav-link login-button" onClick={handlePricingClick}>Pricing</button>
-          <button className="nav-link login-button" onClick={handleTryNowClick}>Login</button>
+          <a href="/pricing" className="nav-link login-button">Pricing</a>
+          <a href="/login" className="nav-link login-button">Login</a>
         </nav>
       </header>
 
