@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './HomeScreen.css';
 import logo from '/assets/ai-trainer.png'; // Make sure the path is correct
 import { useNavigate } from 'react-router-dom';
@@ -39,7 +39,7 @@ const HomeScreen = () => {
   };
 
   const handleTryNowClick = () => {
-    navigate('/trainer');
+    navigate('/login');
   };
 
   return (
@@ -50,8 +50,8 @@ const HomeScreen = () => {
           <span className="app-name">Posturize</span>
         </div>
         <nav className="navigation">
-          <a href="/" className="nav-link">Home</a>
-          <a href="/pricing" className="nav-link">Pricing</a>
+          <a href="/" className="nav-link login-button">Home</a>
+          <a href="/pricing" className="nav-link login-button">Pricing</a>
           <a href="/login" className="nav-link login-button">Login</a>
         </nav>
       </header>

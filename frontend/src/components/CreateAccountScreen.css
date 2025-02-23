@@ -42,7 +42,7 @@
 .create-account-container button {
   width: 100%;
   padding: 10px;
-  background-color: #90EE90; /* Lime green button */
+  background-color: #9F6BA0; /* Lime green button */
   color: #000; /* Black text */
   border: none;
   border-radius: 4px;
@@ -53,7 +53,7 @@
 
 .create-account-container button:hover {
   background-color: #000; /* Black on hover */
-  color: #90EE90; /* Lime green text on hover */
+  color: #9F6BA0; /* Lime green text on hover */
 }
 
 .error-message {
@@ -63,7 +63,7 @@
 }
 
 .success-message {
-  color: green;
+  color: #9F6BA0;
   margin-bottom: 10px;
   text-align: center; /* Center success message */
 }
@@ -75,7 +75,7 @@
 }
 
 .create-account-container a {
-  color: #90EE90; /* Lime green link color */
+  color: #9F6BA0; /* Lime green link color */
   text-decoration: none;
   transition: color 0.3s; /* Smooth color transition */
 }

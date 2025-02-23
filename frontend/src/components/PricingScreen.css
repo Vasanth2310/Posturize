@@ -12,6 +12,7 @@
   .plan-card {
     border: 1px solid #333; /* Darker border */
     padding: 20px;
+    color: #9F6BA0;
     margin-bottom: 20px;
     border-radius: 8px;
     width: 300px;
@@ -29,7 +30,7 @@
   
   .plan-card h3 {
     margin-bottom: 10px;
-    color: #90EE90; /* Lime green heading */
+    color: #9F6BA0; /* Lime green heading */
   }
   
   .plan-details {
@@ -51,11 +52,11 @@
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #90EE90; /* Lime green price */
+    color: #9F6BA0; /* Lime green price */
   }
   
   .plan-card button {
-    background-color: #90EE90; /* Lime green button */
+    background-color: #9F6BA0;
     color: #000; /* Black text */
     padding: 10px 20px;
     border: none;
@@ -66,12 +67,12 @@
   
   .plan-card button:hover {
     background-color: #000; /* Black on hover */
-    color: #90EE90; /* Lime green text on hover */
+    color: #9F6BA0; 
   }
   
   /* Responsive Styles (adjust as needed) */
   @media (max-width: 400px) {
     .plan-card {
-      width: 90%;
+      width: 100%;
     }
   }
