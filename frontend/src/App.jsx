@@ -38,15 +38,15 @@ function App() {
               element={<HomeScreen />} 
             />
             <Route 
-              Navigate to="/login" 
+              path="/login" 
               element={<LoginScreen onLogin={handleLogin} /> } 
             />
             <Route 
-              Navigate to="/create-account" 
+              path="/create-account" 
               element={<CreateAccountScreen />} 
             />
             <Route 
-              Navigate to="/pricing" 
+              path="/pricing" 
               element={<PricingScreen />} 
             />
             {/* Protected route for Trainer */}
