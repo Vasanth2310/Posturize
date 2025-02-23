@@ -50,9 +50,9 @@ const HomeScreen = () => {
           <span className="app-name">Posturize</span>
         </div>
         <nav className="navigation">
-          <a href="https://posturize.vercel.app/" className="nav-link login-button">Home</a>
-          <a href="https://posturize.vercel.app/pricing" className="nav-link login-button">Pricing</a>
-          <a href="https://posturize.vercel.app/login" className="nav-link login-button">Login</a>
+          <a href="/" className="nav-link login-button">Home</a>
+          <a href="/pricing" className="nav-link login-button">Pricing</a>
+          <a href="/login" className="nav-link login-button">Login</a>
         </nav>
       </header>
 
