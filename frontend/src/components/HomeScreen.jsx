@@ -46,7 +46,7 @@ const HomeScreen = () => {
     <div className="home-container">
       <header className="header">
         <div className="logo-container">
-          <img src={logo} alt="FitAI Logo" className="logo" />
+          <img src={"/assets/Posturize (1).png"} alt="FitAI Logo" className="logo" />
           <span className="app-name">Posturize</span>
         </div>
         <nav className="navigation">

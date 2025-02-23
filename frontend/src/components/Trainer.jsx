@@ -79,7 +79,7 @@ const Trainer = () => {
         <div className="trainer-container">
             <div className="header">
                 <div className="logo-container">
-                    <img src="/assets/ai-trainer.png" alt="Posturize Logo" className="logo" />
+                    <img src="/assets/Posturize (1).png" alt="Posturize Logo" className="logo" />
                     <h1 className="app-title">Posturize</h1>
                 </div>
             </div>

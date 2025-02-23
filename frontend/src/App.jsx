@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import HomeScreen from './src/components/HomeScreen';
-import LoginScreen from './src/components/LoginScreen';
-import CreateAccountScreen from './src/components/CreateAccountScreen';
-import PricingScreen from './src/components/PricingScreen';
+import HomeScreen from './components/HomeScreen';
+import LoginScreen from './components/LoginScreen';
+import CreateAccountScreen from './components/CreateAccountScreen';
+import PricingScreen from './components/PricingScreen';
 import Trainer from './components/Trainer';
 import './App.css';
 
