@@ -17,6 +17,51 @@
 
 
 ## 📂 Repository Structure
+posturize/
+│── backend/
+│   ├── Models/
+│   │   ├── Excercise_Model.pth
+│   │
+│   ├── main.py                   # Backend entry point
+│   ├── exercise_analysis.py       # Core logic for posture analysis
+│   ├── requirements.txt           # Dependencies
+│   ├── .env                       # Environment variables
+│
+├── frontend/                     # Frontend (React/Vite)
+│   ├── public/                    # Public assets
+│   │   ├── assests/            # Contains Image files
+│   │
+│   ├── src/                        # React source files
+│   │   ├── assets/                 # Dont Consider
+│   │   ├── components/             # Reusable UI components
+│   │   │   ├── HomeScreen.jsx
+│   │   │   ├── LoginScreen.jsx
+│   │   │   ├── CreateAccountScreen.jsx
+│   │   │   ├── PricingScreen.jsx
+│   │   │   ├── TrainerScreen.jsx
+│   │   │   ├── HomeScreen.css
+│   │   │   ├── LoginScreen.css
+│   │   │   ├── PricingScreen.css
+│   │   │   ├── Trainer.css
+│   │   │
+│   │   ├── App.jsx                    # Root component
+│   │   ├── App.css
+│   │   ├── main.jsx                    # Entry point
+│   │   ├── index.css                   # Global styles
+│   │
+│   ├── .env                            # Frontend environment variables
+│   ├── .gitignore                       # Ignore unnecessary files
+│   ├── vite.config.js                   # Vite configuration
+│   ├── package.json                     # Project metadata
+│   ├── package-lock.json                 # Dependencies lockfile
+│   ├── index.html
+│   ├── enlist.config.js
+|
+├── node_modules
+├── package.json                     # Project metadata
+├── package-lock.json  
+├── README.md                            # Project documentation
+└── LICENSE                               # License file
 
 
 ## ⚙️ Modules

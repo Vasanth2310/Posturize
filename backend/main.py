@@ -20,7 +20,7 @@ ALGORITHM = os.getenv("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 origins = [
-    "http://localhost:5173",
+    "http://localhost:5173", "https://posturize.vercel.app"
 ]
 
 app = FastAPI()
