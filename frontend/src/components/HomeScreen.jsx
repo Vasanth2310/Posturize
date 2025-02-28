@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, Link } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './HomeScreen.css';
 import logo from '/assets/ai-trainer.png'; // Make sure the path is correct
 import { useNavigate } from 'react-router-dom';
@@ -50,9 +50,9 @@ const HomeScreen = () => {
           <span className="app-name">Posturize</span>
         </div>
         <nav className="navigation">
-          <Link to="/" className="nav-link login-button">Home</Link>
-          <Link to="/pricing" className="nav-link login-button">Pricing</Link>
-          <Link to="/login" className="nav-link login-button">Login</Link>
+          <a href="/" className="nav-link login-button">Home</a>
+          <a href="/pricing" className="nav-link login-button">Pricing</a>
+          <a href="/login" className="nav-link login-button">Login</a>
         </nav>
       </header>
 
