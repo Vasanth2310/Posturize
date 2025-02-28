@@ -9,6 +9,7 @@ import mediapipe as mp
 from excercise_analysis import feedback_and_count
 from typing import Optional
 import os
+import json
 from dotenv import load_dotenv
 import jwt
 from datetime import datetime, timedelta
@@ -33,10 +34,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# JSON File for user storage
+USERS_FILE = "users.json"
 
-users = {}  
+def load_users():
+    if os.path.exists(USERS_FILE):
+        with open(USERS_FILE, "r") as f:
+            return json.load(f)
+    return {}
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")  # Correct usage
+def save_users(users):
+    with open(USERS_FILE, "w") as f:
+        json.dump(users, f)
+
+users = load_users()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 class Token(BaseModel):
     access_token: str
@@ -54,7 +67,7 @@ def create_access_token(data: dict):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-def verify_token(token: str): # Same as before
+def verify_token(token: str):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         return payload
@@ -62,12 +75,12 @@ def verify_token(token: str): # Same as before
         print(f"Token verification failed: {e}")
         return None
 
-def get_current_user(token: str = Depends(oauth2_scheme)): # Correct dependency injection
+def get_current_user(token: str = Depends(oauth2_scheme)):
     payload = verify_token(token)
     if payload is None:
         raise HTTPException(status_code=401, detail="Invalid token")
     username = payload.get("sub")
-    user = users.get(username) #Replace this with database call in production
+    user = users.get(username)
     if user is None:
         raise HTTPException(status_code=401, detail="User not found")
     return user
@@ -75,8 +88,9 @@ def get_current_user(token: str = Depends(oauth2_scheme)): # Correct dependency 
 @app.post("/register", status_code=201)
 def register_user(user: UserCreate):
     if user.username in users:
-        raise HTTPException(status_code=400, detail="Email already exists")
-    users[user.username] = {"name": user.name, "password": user.password}  # Store user
+        raise HTTPException(status_code=400, detail="Username already exists")
+    users[user.username] = {"name": user.name, "password": user.password}
+    save_users(users)
     return {"message": "User registered successfully"}
 
 @app.post("/token", response_model=Token)
