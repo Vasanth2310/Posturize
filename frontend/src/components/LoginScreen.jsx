@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import './LoginScreen.css';
 
 const LoginScreen = ({ onLogin }) => {
@@ -76,7 +77,7 @@ const LoginScreen = ({ onLogin }) => {
                     {isLoading ? "Logging in..." : "Login"} {/* Show loading message */}
                 </button>
                 <p>
-                    Don't have an account? <a href="/create-account">Create Account</a>
+                    Don't have an account? <Link to="/create-account">Create Account</Link>
                 </p>
             </form>
         </div>
