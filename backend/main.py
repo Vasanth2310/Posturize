@@ -138,4 +138,3 @@ def generate_frames(exercise: str):
 @app.get("/video_feed/")
 def video_feed(exercise: str = Query(..., description="Exercise to perform")):
     return StreamingResponse(generate_frames(exercise), media_type="multipart/x-mixed-replace; boundary=frame")
-
